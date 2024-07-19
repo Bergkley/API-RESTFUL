@@ -14,8 +14,12 @@ app.get('/', (req, res) => {
     res.json({ message: 'API funcionando!' });
 });
 
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD);
 
+mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@apicluster.sizyy70.mongodb.net/bancoapi?retryWrites=true&w=majority&appName=APICluster`)
+.then(() => {
+    console.log('Conectado ao MongoDB');
+    app.listen(process.env.PORT || 3000);
+})
 
-
-
-app.listen(3000, () => console.log('Server running on port 3000'));

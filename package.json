@@ -10,6 +10,7 @@
   "author": "Bergkley Ferreira Brasil",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.17.1",
     "mongoose": "^6.0.7",
     "nodemon": "^2.0.13"

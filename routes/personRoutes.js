@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-router.post('/person', async(req, res) => {
+router.post('/', async(req, res) => {
     const { name, salary, approved } = req.body;
   
     if(!name){

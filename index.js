@@ -10,6 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //rotas api
+app.post('/person', async(req, res) => {
+ 
+
+ 
+})
 
 //rotas
 app.get("/", (req, res) => {

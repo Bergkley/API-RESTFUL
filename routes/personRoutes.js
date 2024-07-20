@@ -33,4 +33,9 @@ router.post('/', async(req, res) => {
           res.status(500).json({ message: error });
       }
   })
+
+
+  router.get('/:id', async(req, res) => {
+    
+  })
   module.exports = router

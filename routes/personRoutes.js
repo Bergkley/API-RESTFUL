@@ -78,6 +78,11 @@ router.post('/', async(req, res) => {
     const id = req.params.id;
   
     const person = await Person.findOne({ _id: id });
+    if(!person){
+      res.status(422).json({ message: 'Pessoa nao encontrada!' });
+      return
+    }
+  
     
   })
 

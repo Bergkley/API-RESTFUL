@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const Person = require("./models/Person");
 
 router.post('/', async(req, res) => {
     const { name, salary, approved } = req.body;

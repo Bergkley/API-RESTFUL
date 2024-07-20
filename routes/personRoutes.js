@@ -61,7 +61,16 @@ router.post('/', async(req, res) => {
       approved
     }
   
-    
+    try {
+      const updatedPerson = await Person.updateOne({ _id: id }, person);
+      if(updatedPerson.matchedCount === 0){
+        res.status(422).json({ message: 'Pessoa nao encontrada!' });
+        return
+      }
+      res.status(200).json(person);
+    } catch (error) {
+      res.status(500).json({ message: error });
+    }
   })
 
 

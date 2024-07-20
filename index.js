@@ -19,7 +19,13 @@ app.post('/person', async(req, res) => {
     approved
   }
 
- 
+  try {
+    await Person.create(person);
+    res.status(201).json({ message: 'Pessoa inserida com sucesso!' });
+  } catch (error) {
+    res.status(500).json({ message: error });
+  }
+
  
 })
 

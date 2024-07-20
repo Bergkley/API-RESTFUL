@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Person = require("../models/Person");
 
+
 router.post('/', async(req, res) => {
     const { name, salary, approved } = req.body;
   
@@ -22,5 +23,9 @@ router.post('/', async(req, res) => {
     }
   
    
+  })
+
+  router.get('/', async(req, res) => {
+      
   })
   module.exports = router

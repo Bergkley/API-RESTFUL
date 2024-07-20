@@ -55,6 +55,12 @@ router.post('/', async(req, res) => {
     const id = req.params.id;
     const { name, salary, approved } = req.body;
   
+    const person = {        
+      name,
+      salary,    
+      approved
+    }
+  
     
   })
 

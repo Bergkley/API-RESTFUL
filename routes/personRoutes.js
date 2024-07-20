@@ -83,7 +83,12 @@ router.post('/', async(req, res) => {
       return
     }
   
-    
+    try {
+      await Person.deleteOne({ _id: id });
+      res.status(200).json({ message: 'Pessoa removida com sucesso!' });
+    } catch (error) {
+      res.status(500).json({ message: error });
+    }
   })
 
 

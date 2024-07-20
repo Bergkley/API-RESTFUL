@@ -13,7 +13,13 @@ app.use(express.json());
 app.post('/person', async(req, res) => {
   const { name, salary, approved } = req.body;
 
-  
+  const person ={
+    name,
+    salary,
+    approved
+  }
+
+ 
  
 })
 

@@ -13,6 +13,10 @@ app.use(express.json());
 app.post('/person', async(req, res) => {
   const { name, salary, approved } = req.body;
 
+  if(!name){
+    res.status(422).json({ message: 'O nome e obrigatorio!' });	
+  }
+
   const person ={
     name,
     salary,

@@ -73,5 +73,12 @@ router.post('/', async(req, res) => {
     }
   })
 
+  //Delete
+  router.delete('/:id', async(req, res) => {
+    const id = req.params.id;
+  
+   
+  })
+
 
   module.exports = router
